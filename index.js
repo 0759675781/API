@@ -1,21 +1,39 @@
+const httpErrors = require('http-errors');
+
 const express=require('express')
 require('dotenv').config();
 const cors = require('cors');
 require('./helpers/init_mongoDb');
-const app=express();
 
-app.use(express.json());
-app.use(cors());
-const studentroutes=require('./routes/api');
-
-const lecturersroutes=require('./routes/lecturer.routes');
 
 const authoroutes=require('./routes/auth.route');
+const studentroutes=require('./routes/api');
+const lecturersroutes=require('./routes/lecturer.routes');
+
+const app=express();
+
+const allowedOrigins =['http://localhost:3000']
+app.use(cors({
+    origin:(origin, callback)=>{
+if(!origin || allowedOrigins.includes(origin)){
+    callback(null, true)
+}else{
+callback(new Error('Not Allowed by cors'))
+}
+    }
+}));
+
+app.use(express.json());
+
+
+
+
+
+
 
 app.use('/students',studentroutes);
 
 app.use('/lecturers',lecturersroutes);
-
 app.use('/auth',authoroutes);
 
 //handling 404 errorss
