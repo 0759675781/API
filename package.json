@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "node-js-jwt-auth",
   "version": "1.0.0",
   "description": "Node.js Demo for JWT Authentication",
@@ -22,5 +23,44 @@
     "jsonwebtoken": "^9.0.0",
     "mysql2": "^2.3.3",
     "sequelize": "^6.32.1"
+=======
+  "name": "api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+<<<<<<< HEAD
+    "start": "nodemon app.js start"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.1",
+    "mysql2": "^3.5.2",
+    "nodemon": "^3.0.1",
+    "react-router-dom": "^6.14.2",
+    "sequelize": "^6.32.1"
+=======
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.4.0",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "http_error": "^1.0.1",
+    "http-errors": "^2.0.0",
+    "jsonwebtoken": "^9.0.1",
+    "mongoose": "^7.3.1",
+    "nodemon": "^2.0.22"
+>>>>>>> 703581940879354ffea072fa6c9f1a946a938857
+>>>>>>> 01c24f45f277d1a2499d0ec22eb4e695bd1e159e
   }
 }
